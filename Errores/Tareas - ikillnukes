@@ -1,0 +1,90 @@
+TODO: Acabar el slider, había que hacer que se parase cuando haciamos mouse over
+
+Arreglar el login, hay un pequeño problema con las sesiones que hacen que la sesión solo dure 2 días, cuando ese periodo acaba el scrpt detecta
+que sigues logueado pero no sabe con que cuenta ya que desapareció, mi compañero Gabriel comenzó a resolverlo pero se quedó a la mitad
+
+Arreglar todos los formularios, básicamente, yo para enviar un formulario siempre lo hacía de la siguiente forma: Un botón (sin submit) que ejecuta
+una función que contiene una query de ajax que va a un php, que es lo que ocurre, que al saltarme el submit, pues el navegador tiende a crear uno el
+mismo, y por ejemplo, al pulsar enter pues se ejecuta el onsubmit en vez de ejecutarse la función personalizada que yo cree para dicho formulario,
+la solución es bien sencilla, solo hay que handlear el evento onsubmit con jquery para llamar la función que se desee, el problema está en que habrá
+13 o 14 formularios repartidos entre todos los scripts, y lo peor es que estoy empezando a olvidar donde estaban ubicados, o sea, que cuanto para más
+tarde lo dejemos va a ser peor.
+
+Otra cosa que hay que cambiar es el código php (de procedural a OOP), básicamente, está escrito en su forma procedural, la razón? Pues que cuando yo 
+(Ikillnukes) empecé a crear la web no tenía mucha idea de la forma OOP, y dominaba más la forma básica que es la procedural. Ahora la cosa es que
+habrá que transformar todo lo del main.php a 20 o 30 archivos y todo lo que esté relacionado con el en los archivos de la carpeta includes pues
+cambiarlo, y me parece a mi que va a resultar un poco follón y tedioso.
+
+A parte, esta actualización la hice corriendo a escape (bueno, entre varios meses) intentando evitar que se me fuera mas tiempo de la cuenta debido
+a que tengo estudios y no quiero mezclar los estudios con la programación (cosa que aún sigo haciendo y que ahora a estas alturas de Mayo debería
+dejar hasta mediados de Junio ya que tengo la selectividad), me dejé muchas cosas sin arreglar o sin hacer entre las que están (todo esto está en
+un archivo txt que tengo en local):
+
+- Tengo q comprobar en todo momento la sesion, y asi me aseguro de q sigue online el usuario al realizar una peticion (hare un define el cual diga si hay q comprobar)
+- Probablemente acabe haciendo un foreach  los errores del mamanger
+- Tendré q crear un segundo apartado de descripcion, uno de vista previa y otro extendido (o bien cortar la descripción en el primer punto y aparte q haya.)
+- Yendría que poder editar la fecha fe publicacion como en el fb
+- Falta ponerle un checkbox en la fecha de publicacion q diga q el asset no está publicado
+- Hacer una tabla que registre todas las conexiones
+- Poner un rating en la preview.php (y poder deshabilitarlo, en x proyecto, y globalmente)
+- Meter en project-manager.php un bbceditor para la desc
+- Mirar los nextSiblings y los previousSiblings para meterles o no el Element
+- Hacer que en el other_data dentro del preview halla una tabla donde se muestre el rating y el share en el segundo td
+- Hacer que en los minijuegos haya una tabla lateral con los logros
+- Poner los proyectos recomendados debajo del other_data en el preview.php cuando haya unos cuantos más proyectos
+- El author y el type de la array del project preset deberian ir por fuera del idioma
+- No se si ponerle un link al banner q lleve a la index
+- No se si ocultar el paginator cuando solo haya una pagina
+- A la hora de ir a borrar un proyecto voy a hacer que se muestre el nombre creo q esto ya lo tenia apuntado)
+- Al mostrar un error en el post_manager los campos se resetean
+- Quizás el post-amanger se deberia llamar de otra forma, como por ejemplo, project-manager, o no se..
+- No se si ponerle un separador a la lista de miembros tb
+- Evitar nuevos parametros en el paginator al hacer click (tengo q pulir la clase paginator)
+- Hacer que si una persona q es admin falla 2 veces la idenfiticación de la administración bajarle el rango a usuario normal por seguridad para luego subirsela manualmente desde la base de datos (es por si a alguien le usurpan la contraseña, ya paso en Spirate)
+- Tendria q hacer una func q obtuviera todos las propiedades de un objeto recursivamente para hacer ddebug correctamente
+- Arreglar lo de las imagenes de las teclas y añadir un tooltip
+- Cambiar lo del header de añadir proyectos
+- Terminar el marquee de noticias
+- Arreglar todo lo del css (6 tasks)
+- Arreglar lo de las teclas y añadir más
+- Hay un pequeño bug, al haber ya una miniatura seleccionada y cambiar la miniatura la chincheta no parece en la miniatura que antes era la actual
+- Hacer que en el project-manager haya una estrella (al lado del lapiz y la cruz) para marcar el proyecto como destacador
+- Corregir actividad de adiministración (caption mal escrita)
+
+Estas son cosas más generales que tenía previstas dejarlas de lado, pero se me quedo de lado esto y la lista anterior:
+
+- Hacer q se puedan añadir descripciones a las imágenes y videos, q se puedan comentar
+- Hacer q los proyectos se puedn comentar
+- Hacer q haya un starrsting y un share por varias redes sociales pero estoy lo voy a hcer en la próxima actualización
+- Obtener miniaturas de un video a traves del enlace
+- Voy a organizar todo mejor, voy a meter todo el codigo del main en un autoload.php que esté dentro de x sitio (creo q el index no es buen sitio preo bueno) luego voy a coger y voy a hacer todo clases y las meter en la carpeta classes, luego, creare una array con todos los includes de la carpeta class o bien listare los archivos y los incluiré, antes de esto a través de un define voy a crear una segunda array q diga q classes excluir
+- Hacer q se puedan añadir varios autores al proyecto, y q puedan ponerle rangos, en plan desarrollador principal, diseñador, etc
+- Hacer que al añadir o al editar un proyecto y perder la sesion o cerrar el navegador se guarde (en vez de preguntar, por lo pronto hacer q pregunte)
+- Registro por invitación
+
+Como es lógico después de acabar esto hay que seguir haciendo otro montón de cosas para lanzar la siguiente update, las cuales tendrán lo siguiente:
+
+- Blog con comentarios
+- Perfiles
+- Menú de usuario
+- Ratings
+- Links para bots y usuarios registrados y links invisibles para bots
+- Nueva index con widgets
+- Publicidad para invitados (y creo que para los usuarios con emails sin registrar tb)
+- Urls amigables
+- Algunas de las cosas apuntadas en el main.php
+
+Después de esta viene otra pero esta se realizará más tarde, por ahora, no voy a decir que cosas tenía pensado meterle xD
+
+---
+
+Aquí por lo pronto hay 2 actualizaciones web, y bueno, una tercera que no he querido decir que caracteristicas tiene.
+
+La idea de esta página es hacer también un pequeño CMS, como se puede observar, tiene una administración cosa que en fin tampoco es obligatoria
+pero tiene la misión de facilitar el trabajo a todos los usuarios que la administren. Tiene ciertas cosas que están destinadas a hacer de la web
+un CMS. O quizás, ese sea uno de mis propósitos, no se.
+
+Otra de las ideas que se le ha ocurrido a chustachus es hacer que los usuarios corrientes puedan también publicar sus proyectos pero no se. A mi se
+me había ocurrido que en la tercera update haya un sistema de sorteos retroalimentado con el dinero que de los proyectos vendidos con Unity. Pero,
+como todo en esta vida, habrá que ver primero si termina de cuajar lo de los assets para poder proseguir después, no nos vamos a hcer aquí el cuento
+de la lechera. Además, de que yo antes de nada quiero hacerme de un buen pepino de PC para poder hacer las cosas más agusto.

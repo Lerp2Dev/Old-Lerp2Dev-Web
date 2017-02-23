@@ -1,0 +1,389 @@
+/*select#htmlkey option[value="flechas"]   { background-image:url(../images/controls/flechas.png);   }
+select#htmlkey option[value="female"] { background-image:url(female.png); }
+select#htmlkey option[value="others"] { background-image:url(others.png); }*/
+
+#filePopup 
+{
+	width:100%;
+	height: 100%;
+	position:fixed;
+	margin:0;
+	padding:0;
+	background: rgba(1,1,1,.25);
+	z-index:10;
+}
+
+.fpSubdiv 
+{
+	width: 60%;
+	height: 50%;
+	background-color: white;
+	border: #c9ba47 1px solid;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.fpSubdiv > center
+{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+}
+
+.fpSubdiv > center > h2 
+{
+	margin-bottom: 5px;
+}
+
+.btn
+{
+	background-color: transparent;
+	background-position: 2px 0%;
+	background-repeat: no-repeat;
+  padding: 10px 5px 7px 38px!important;
+  margin-top: 5px;
+  display: block;
+}
+
+.btn.Photo 
+{
+	background-image: url("../../../images/icons/photo.png");
+}
+
+.btn.Video
+{
+	background-image: url("../../../images/icons/video.png");
+	margin-left: 5px;
+}
+
+.btnBack 
+{
+	background-color: transparent;
+	background-position: 2px 0%;
+	background-repeat: no-repeat;
+  padding: 10px 5px 7px 38px!important;
+  background-image: url("../../../images/icons/back.png");
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.btnClose 
+{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.charcount 
+{
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.charcount > label {
+  position: absolute;
+  top: 7px;
+  right: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.menu_manager 
+{
+  width: 100%;
+}
+
+.menu_manager > div > div:nth-child(1),
+.menu_manager > div > div:nth-child(2) 
+{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.menu_manager > div:nth-child(1) 
+{
+  height: 28px;
+}
+
+.menu_manager > div:nth-child(1) > div:nth-child(1):after,
+.menu_manager > div:nth-child(1) > div:nth-child(2):after 
+{
+  background-color: #c9ba47;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-radius: 8px 8px 0px 0px;
+  content: "";
+  transform-origin: bottom;
+}
+
+.menu_manager > div:nth-child(1) > div:nth-child(1) 
+{
+  float: left;
+  padding: 2px 20px;
+}
+
+.menu_manager > div:nth-child(1) > div:nth-child(1):after 
+{
+  -webkit-transform: perspective(10px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(10px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(10px) rotateX(2deg);
+}
+
+.menu_manager > div:nth-child(1) > div:nth-child(2) 
+{
+  float: right;
+  width: 64px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.menu_manager > div:nth-child(1) > div:nth-child(2):after 
+{
+  -webkit-transform: perspective(10px) rotateX(4deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(10px) rotateX(4deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(10px) rotateX(4deg);
+  cursor: pointer;
+}
+
+.menu_manager > div:nth-child(2) 
+{
+  border: 3px #C9BA47 solid;
+  border-radius: 0 0 5px 5px;
+  margin-top: -3px;
+}
+
+.menu_manager > div:nth-child(3) 
+{
+  position: relative;
+  z-index: 2; 
+  text-align: center;
+  width: 350px;
+  left: 50%;
+  margin-left: -175px;
+}
+
+.menu_manager > div:nth-child(3):after 
+{
+  position: absolute;
+  top: -29px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border: 3px #C9BA47 solid;
+  border-radius: 5px 5px 0 0;
+  content: "";
+  -webkit-transform: perspective(10px) rotateX(179deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(10px) rotateX(179deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(10px) rotateX(179deg);
+  transform-origin: bottom;
+}
+
+.menu_manager table 
+{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/*.menu_manager table tr td:nth-child(1) 
+{
+  width: 100%;
+}*/
+
+.menu_manager table tr td:nth-child(2) 
+{
+  min-width: 82px;
+}
+
+.menu_manager table tr:nth-child(1) > td
+{
+  border-bottom: 2px dashed #a4a4a4;
+  padding: 5px 5px 6px 5px;
+}
+
+.menu_manager table td:nth-child(1) 
+{
+  border-right: 2px dashed #a4a4a4;
+}
+
+.menu_manager td 
+{
+  padding: 5px;
+}
+
+.notepad 
+{
+  position: absolute;
+  top: 59px;
+  left: 21px;
+  width: 215px;
+  height: 216px;
+  background: transparent;
+  border: 0px;
+  outline: none;
+  resize: none;
+}
+
+#val_mail_opts, #max_log_tries_opts 
+{
+  margin: 5px 0 0 25px;
+}
+
+#login_captcha_opts
+{
+  margin-top: 5px;
+}
+
+.admin-avatar 
+{
+  width:64px;
+  height:64px;
+  position:relative;
+  margin-top:-10px;
+  margin-bottom:10px;
+  border-radius:32px;
+  border:1px #999 solid;
+}
+
+.menu_block.userpreset 
+{
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu_block.userpreset > div:nth-child(1):after
+{
+  -webkit-transform: perspective(10px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(10px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(10px) rotateX(2deg);
+}
+
+.menu_block.userpreset > div:nth-child(2) 
+{
+  display: table;
+  width: 142px;
+  height: 137px;
+}
+
+.menu_block.userpreset > div:nth-child(2) > div:nth-child(1) 
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.profile-editor 
+{
+  width: 100%;
+}
+
+.profile-editor > tbody > tr > td
+{
+  width: 50%;
+}
+
+.profile-editor > tbody > tr > td:nth-child(2)
+{
+  border-left: 4px dashed #A4A4A4;
+  padding: 5px;
+}
+
+.profile-editor > tbody > tr:nth-child(1) > td
+{
+  border-bottom: 4px dashed #A4A4A4;
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+#avatar_thumb 
+{
+  width: 64px;
+  height: 64px;
+  box-shadow: 3px 3px 5px #888888;
+}
+
+#td2
+{
+  margin-right: 5px;
+}
+
+.del-msg 
+{
+  border: 3px dashed #c9ba47;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#avatar_popup 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);;
+  z-index: 10;
+}
+
+#avatar_popup > div 
+{
+  background-color: #fff;
+  padding: 0px 5px 37px 5px;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: -200px;
+}
+
+#avatar_popup img:nth-child(2) 
+{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+} 
+
+#avatar_popup img:nth-child(3) 
+{
+  width: 100%;
+  height: 100%;
+}
+
+#avatar_popup h3 
+{
+  margin-bottom: 8px;
+  position: relative;
+  top: 5px;
+}
+
+#htmlkey
+{
+  width:209px;
+}
